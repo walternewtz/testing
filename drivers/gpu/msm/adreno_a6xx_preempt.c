@@ -543,7 +543,6 @@ unsigned int a6xx_preemption_pre_ibsubmit(
 			rb->perfcounter_save_restore_desc.gpuaddr);
 
 	if (context) {
-		struct kgsl_device *device = KGSL_DEVICE(adreno_dev);
 		struct adreno_context *drawctxt = ADRENO_CONTEXT(context);
 		struct adreno_ringbuffer *rb = drawctxt->rb;
 		uint64_t dest = PREEMPT_SCRATCH_ADDR(adreno_dev, rb->id);
